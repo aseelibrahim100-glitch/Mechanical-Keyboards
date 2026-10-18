@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: #f5f6fa;
@@ -9,59 +12,133 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
- 
+
 h1 {
     color: #2a2f7a;
     font-size: 2rem;
+    margin: 0 0 10px 0;
 }
- 
+
 h2 {
     color: #2a2f7a;
     font-size: 1.5rem;
     border-bottom: 2px solid #c9cef5;
+    padding-bottom: 6px;
+    margin: 32px 0 12px 0;
 }
- 
+
 h3 {
     color: #2a2f7a;
     font-size: 1.2rem;
 }
- 
-nav li {
-    display: inline;
-    margin-right: 20px;
+
+p {
+    color: #1f2430;
+    margin: 0 0 16px 0;
 }
- 
+
 img {
     max-width: 100%;
     height: auto;
 }
- 
+
+header {
+    border-bottom: 2px solid #c9cef5;
+    padding-bottom: 15px;
+}
+
 footer {
     border-top: 2px solid #c9cef5;
     margin-top: 30px;
+    padding-top: 15px;
     font-size: 0.9rem;
 }
- 
-/* Links */
+
 a {
     color: #1a4fb8;
     text-decoration: underline;
 }
- 
+
 a:hover {
     color: #0b2f7a;
     background-color: #e1e7ff;
     text-decoration: none;
 }
- 
-/* Class selectors */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #c9cef5;
+    border-radius: 4px;
+}
+
+nav a[aria-current="page"] {
+    font-weight: bold;
+    border: 2px solid #2a2f7a;
+    background-color: #e1e7ff;
+}
+
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    border: 1px solid #c9cef5;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+#main-content {
+    margin-top: 30px;
+}
+
 .highlight {
     background-color: #fff1a8;
     font-weight: bold;
 }
- 
+   /* Cascade: p sets the text color, but .note is a class, which is more specific than an element selector, so .note's color wins on <p class="note"> */
 .note {
+    color: #1b2150;
     background-color: #e8ecff;
     border-left: 5px solid #2a2f7a;
     padding: 10px;
 }
+
+.card {
+    width: 95%;
+    background-color: #ffffff;
+    border: 1px solid #c9cef5;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card h2 {
+       margin-top: 0;
+   }
